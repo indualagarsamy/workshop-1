@@ -12,6 +12,9 @@ class Program
         var endpointConfiguration = new EndpointConfiguration("Booking.ConsoleUI");
         endpointConfiguration.UseTransport<LearningTransport>();
         endpointConfiguration.UseSerialization<NewtonsoftSerializer>();
+        endpointConfiguration.AuditProcessedMessagesTo("audit");
+        endpointConfiguration.SendFailedMessagesTo("error");
+        endpointConfiguration.SendHeartbeatTo("Particular.ServiceControl");
 
         var endpointInstance = await Endpoint.Start(endpointConfiguration).ConfigureAwait(false);
 

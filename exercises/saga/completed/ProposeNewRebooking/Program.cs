@@ -12,6 +12,12 @@ class Program
         endpointConfiguration.UseTransport<LearningTransport>();
         endpointConfiguration.UsePersistence<InMemoryPersistence>();
         endpointConfiguration.UseSerialization<NewtonsoftSerializer>();
+        endpointConfiguration.AuditProcessedMessagesTo("audit");
+        endpointConfiguration.SendFailedMessagesTo("error");
+
+        endpointConfiguration.AuditSagaStateChanges("Particular.ServiceControl");
+        endpointConfiguration.SendHeartbeatTo("Particular.ServiceControl");
+
         var endpointInstance = await Endpoint.Start(endpointConfiguration).ConfigureAwait(false);
 
         Console.WriteLine("Press enter to exit");
