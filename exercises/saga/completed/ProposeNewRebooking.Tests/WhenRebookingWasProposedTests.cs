@@ -25,15 +25,16 @@ public class WhenRebookingWasProposedTests
         rebookingWasProposed = new RebookingWasProposed(
             bookingReferenceId,
             "Aircraft type was changed from Boeing 787 to Boeing 777");
+
     }
 
     [Test]
-    public async Task ShouldNotifyCustomers()
+    public async Task ShouldNotifyCustomersWhenRebookingWasProposed()
     {
         await saga.Handle(rebookingWasProposed, context);
         Assert.AreEqual(2, context.SentMessages.Length);
         Assert.AreEqual(1, context.TimeoutMessages.Length);
-        
+
         var processMessage = (NotifyCustomerAboutProposedRebooking) context.SentMessages[0].Message;
 
         // also test how long the timeout was supposed to be.
@@ -42,7 +43,7 @@ public class WhenRebookingWasProposedTests
     }
 
     [Test]
-    public async Task ShouldAcceptTheRebooking()
+    public async Task ShouldAcceptTheRebookingAfterGracePeriodHasElapsed()
     {
         await saga.Handle(rebookingWasProposed, context);
         await saga.Timeout(new GracePeriodForAcceptingRebookings.CancellationGracePeriodElapsed(), context);
@@ -54,7 +55,7 @@ public class WhenRebookingWasProposedTests
     }
 
     [Test]
-    public async Task ShouldNotAcceptTheRebooking()
+    public async Task ShouldNotAcceptTheRebookingWhenRebookingProposalWasRejected()
     {
         await saga.Handle(rebookingWasProposed, context);
 

@@ -24,13 +24,6 @@ public class WhenRebookingProposalWasRejectedTests
     }
 
     [Test]
-    public async Task ShouldWaitUntilRebookingWasProposed()
-    {
-        await saga.Handle(proposedRebookingWasRejected, context);
-        Assert.IsFalse(saga.Completed);
-    }
-
-    [Test]
     public async Task ShouldNotNotifyCustomers()
     {
         await saga.Handle(proposedRebookingWasRejected, context);
