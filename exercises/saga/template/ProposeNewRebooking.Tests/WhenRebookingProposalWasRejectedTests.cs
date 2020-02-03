@@ -23,5 +23,5 @@ public class WhenRebookingProposalWasRejectedTests
         proposedRebookingWasRejected = new RebookingProposalWasRejected(bookingReferenceId);
     }
 
-    // Add unit tests
+    // TODO: Add unit tests
 }

@@ -15,7 +15,6 @@
     <ProjectReference Include="..\Booking.Commands\Booking.Commands.csproj" />
     <ProjectReference Include="..\Booking.Events\Booking.Events.csproj" />
     <ProjectReference Include="..\FlightPlanning.Events\FlightPlanning.Events.csproj" />
-    <ProjectReference Include="..\Loyalty.Events\Loyalty.Events.csproj" />
   </ItemGroup>
 
 </Project>

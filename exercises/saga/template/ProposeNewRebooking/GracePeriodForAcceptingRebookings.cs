@@ -7,10 +7,9 @@ using NServiceBus;
 
 public class GracePeriodForAcceptingRebookings  :
 Saga<GracePeriodForAcceptingRebookingsData>
-// Define what messages start the saga and what timeout messages are being received
-// Implement SagaData class to store the state
-// Implement IAmStartedByMessages<T> for messages that start the saga
-// Implement IHandleTimeouts<T> for to implement timeout 
+// SagaData class has already been defined to store the state. See GracePeriodForAcceptingRebookingsData
+// TODO: Implement IAmStartedByMessages<T> for messages that start the saga
+// TODO: Implement IHandleTimeouts<T> to implement any timeout messages
 
 {
     // Map the properties of the saga that uniquely identifies with the saga data property
@@ -23,12 +22,12 @@ Saga<GracePeriodForAcceptingRebookingsData>
             .ToSaga(data => data.BookingReferenceId);
     }
 
-    // Implement RebookingWasProposed handler and start a timeout
+    // TODO: Implement RebookingWasProposed handler and start a timeout
 
-    // Implement RebookingProposalWasRejected event
+    // TODO: Implement RebookingProposalWasRejected event
 
-    // Define and Implement Timeout message handler
+    // TODO: Define and Implement Timeout message handler
 
     static ILog logger = LogManager.GetLogger<GracePeriodForAcceptingRebookings>();
-    
+
 }

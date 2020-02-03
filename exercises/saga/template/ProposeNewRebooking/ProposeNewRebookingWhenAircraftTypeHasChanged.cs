@@ -18,7 +18,6 @@ public class ProposeNewRebookingWhenAircraftTypeHasChanged :
         //{
 
         // Get the groupings . for each group send a message
-        
         var cmd = new ProposeRebooking(bookingReferenceId: "QAZ123",
             customerId: "1",
             reasonForRebooking: $"Aircraft type was changed from {message.OldAircraftTypeId} to {message.NewAircraftTypeId} on flight {message.FlightId}");

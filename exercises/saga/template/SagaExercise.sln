@@ -1,17 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.438
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29613.14
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FlightPlanning.Events", "FlightPlanning.Events\FlightPlanning.Events.csproj", "{267D1238-3B69-4D43-90B0-3D7B0A3010C4}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Loyalty.Events", "Loyalty.Events\Loyalty.Events.csproj", "{6C9FDBF7-9E72-4302-B8A8-E92C2B00D991}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Booking", "Booking", "{783C1CED-8B06-407D-8F18-BE16DD56E07E}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FlightPlanning", "FlightPlanning", "{85A2A497-48A4-4DF2-8CAE-D2FE743470FE}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Loyalty", "Loyalty", "{C87B0A67-62D8-4EA5-AE30-3D8A3D3F796F}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Booking.Commands", "Booking.Commands\Booking.Commands.csproj", "{1DC0D71E-74C9-4C34-BD04-059E6C4EDD56}"
 EndProject
@@ -21,7 +17,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProposeNewRebooking.Tests",
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Booking.Events", "Booking.Events\Booking.Events.csproj", "{448BFA20-3A04-4D6B-B9CB-61BB70940BE5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Booking.ConsoleUI", "Booking.ConsoleUI\Booking.ConsoleUI.csproj", "{FD4D9176-A604-4769-B949-4C9B7A1FEC7D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Booking.ConsoleUI", "Booking.ConsoleUI\Booking.ConsoleUI.csproj", "{FD4D9176-A604-4769-B949-4C9B7A1FEC7D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,10 +29,6 @@ Global
 		{267D1238-3B69-4D43-90B0-3D7B0A3010C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{267D1238-3B69-4D43-90B0-3D7B0A3010C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{267D1238-3B69-4D43-90B0-3D7B0A3010C4}.Release|Any CPU.Build.0 = Release|Any CPU
-		{6C9FDBF7-9E72-4302-B8A8-E92C2B00D991}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6C9FDBF7-9E72-4302-B8A8-E92C2B00D991}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6C9FDBF7-9E72-4302-B8A8-E92C2B00D991}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6C9FDBF7-9E72-4302-B8A8-E92C2B00D991}.Release|Any CPU.Build.0 = Release|Any CPU
 		{1DC0D71E-74C9-4C34-BD04-059E6C4EDD56}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{1DC0D71E-74C9-4C34-BD04-059E6C4EDD56}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1DC0D71E-74C9-4C34-BD04-059E6C4EDD56}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -63,7 +55,6 @@ Global
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{267D1238-3B69-4D43-90B0-3D7B0A3010C4} = {85A2A497-48A4-4DF2-8CAE-D2FE743470FE}
-		{6C9FDBF7-9E72-4302-B8A8-E92C2B00D991} = {C87B0A67-62D8-4EA5-AE30-3D8A3D3F796F}
 		{1DC0D71E-74C9-4C34-BD04-059E6C4EDD56} = {783C1CED-8B06-407D-8F18-BE16DD56E07E}
 		{F713A3D7-49A0-4E74-A73F-9ED61EDDF8A4} = {783C1CED-8B06-407D-8F18-BE16DD56E07E}
 		{758E3F07-DEA6-455F-8AFA-AAAAE7AE666E} = {783C1CED-8B06-407D-8F18-BE16DD56E07E}
